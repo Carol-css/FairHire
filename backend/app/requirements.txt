@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+pydantic
+whisper
+transformers
+openai
+fairlearn
+ibm-aif360
+sqlalchemy
+psycopg2-binary
+python-dotenv
+passlib[bcrypt]
+authlib
+python-jose
