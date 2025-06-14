@@ -1,3 +1,191 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ---Login Page Styles --- */
+
+/* Base body styling: removes default margin/padding, applies a modern font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #fbfffdea 0%, #1b04e6 50%, #4dfcf91c 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Layout container for the whole page:
+   - Ensures content starts top-left
+   - Adds padding
+   - Full height background */
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.card {
+  background: #c8c3c3;
+  padding: 40px;
+  border-radius: 16px;
+  width: 400%;
+  max-width: 400px;
+}
+
+.glow-text {
+  position: absolute;
+  left: 60%;          
+  transform: translateY(-10%); /* Center it exactly */
+  width: 300px;         /* Or any desired width */
+  text-align: right;    /* Align text to the right inside the container */
+  font-size: 30px;
+  font-weight: 500;
+  color: #1e3a8a;
+  text-shadow: 0 0 5px #fff, 0 0 15px #93c5fd, 0 0 25px #2563eb;
+  margin-top: 70px;     /* Spacing from top */
+}
+
+
+
+/* Slight scale effect when hovering the card */
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card h2 {  /* Login heading inside the card */
+  margin-bottom: 24px;
+  font-size: 28px;
+  color: #235def;
+  text-align: center;
+  
+}
+
+/* Grouping for each input label + field */
+.input-group {
+  margin-bottom: 16px;
+ 
+}
+
+/* Input label styling */
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.input-group input { /* Email/Password input field styling */
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #1545e2;  /* Blue border */
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Focus effect for inputs */
+.input-group input:focus {
+  border-color: #d8eff5;
+  box-shadow: 0 0 0 2px rgba(42, 11, 8, 0.274);
+}
+
+
+
+/* Generic button styling: used for submit, role toggles, etc. */
+button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover state for buttons */
+button:hover {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(2, 61, 188, 0.4);
+}
+
+/* Layout container for the whole page:
+   - Ensures content starts top-left
+   - Adds padding
+   - Full height background */
+.container {
+  padding: 40px;
+  display: block;
+  min-height: 100vh;
+}
+
+
+/* FairHire logo styling */
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #031158, 0 0 15px #2537beaf, 0 0 25px #011238;
+ 
+}
+
+.card { /* loginin form layout*/
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(3, 26, 142, 0.847);
+  
+}
+
+/* Toggle section for Candidate vs Employer roles */
+.role-toggle { /*gab between candidate and employeer in sigin form (Dashboard)*/
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Styling for each toggle button */
+.role-toggle button {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  background: #a2a5a9;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+/* Active toggle button (highlighted) */
+.role-toggle .active {
+  background: #2563eb;
+  color: rgb(233, 233, 233);
+  border-color: #2563eb;
+}
+
+/* Submit button (LogIn) — overrides general button for specific styling */
+.Login{
+  color:#f3ecec;
+  width: 100%;
+  padding: 14px 16px;     /* Controls height and spacing */
+  font-size: 16px;         /* Font size */
+  border-radius: 30px;     /* Rounded corners */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+   border-color: #2563eb;
+}
+
+
+
+
