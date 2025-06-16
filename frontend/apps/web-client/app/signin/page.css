@@ -1,0 +1,156 @@
+/* Reset default body styles and set a clean base font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.signin-page {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 2rem;
+}
+
+.signin-box {
+  background-color: #1e1e1e; /* Dark card background */
+  padding: 2.5rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.3), 0 0 10px rgba(255, 255, 25);
+}
+
+.signin-box:hover {
+  box-shadow: 0 0 40px rgba(37, 99, 235, 0.5), 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.signin-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.signin-title {
+  text-align: center;
+  color: #2563eb;
+  font-size: 32px;
+  margin-bottom: 2rem;
+  grid-column: span 2;
+}
+
+
+/* Spacing for each input field group */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+/* General input styling */
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2a2a2a; /* Slightly lighter than background */
+  border: 1px solid #444; /* Subtle border */
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Wrapper to position password field and eye icon together */
+.password-wrapper {
+  position: relative;
+}
+
+.password-input {
+  width: 100%;
+  padding-right: 40px;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box;
+
+  /* 💥 REMOVE default background */
+  background-repeat: no-repeat;
+  background-position: right;
+  background-image: none !important;
+}
+
+
+/* Eye icon inside password field */
+.toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+  font-size: 16px;
+}
+
+
+/* Eye icon becomes white on hover */
+.toggle-icon:hover {
+  color: white;
+}
+
+.signin-btn {
+  width: 220px;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8); /* Gradient blue */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  margin: 3rem auto 0;
+  cursor: pointer;
+  display: block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.signin-btn::before {
+  content: "";
+  position: absolute;
+  top:
+}
+
+/* Styling for feedback or message text (e.g., login errors) */
+.message {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Fix built-in eye icon (Chrome/Edge auto password manager) */
+input::-ms-reveal,
+input::-ms-clear,
+input::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button,
+input[type='password']::-ms-reveal {
+  display: none !important;
+  appearance: none;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box;
+}

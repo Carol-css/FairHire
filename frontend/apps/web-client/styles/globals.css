@@ -186,6 +186,48 @@ button:hover {
    border-color: #2563eb;
 }
 
+.dashboard-info {
+  background: #f5f7fa;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
 
+.dashboard-info h2 {
+  font-size: 1.8rem;
+  color: #0f2027;
+  margin-bottom: 0.5rem;
+}
 
+.dashboard-info p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem;
+}
+
+.info-grid div {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-grid h3 {
+  color: #00bcd4;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.note {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: #006064;
+}
