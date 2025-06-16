@@ -1,55 +1,89 @@
-'use client'; // only if you're using the app directory
+'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
+import './page.css';
 
 export default function SignIn() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // 🔐 Replace with real API call
-    if (email === 'user@example.com' && password === '123456') {
-      setMessage('Login successful!');
-    } else {
-      setMessage('Invalid credentials');
-    }
+  const togglePassword = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-[#0f2027] via-[#203a43] to-[#2c5364] text-white">
-      <div className="bg-[#1e1e1e] p-8 rounded-lg shadow-lg w-96">
-        <h2 className="text-2xl font-bold text-center mb-6">Sign In</h2>
-        <form onSubmit={handleSubmit}>
-          <label>Email:</label>
-          <input
-            type="email"
-            className="w-full p-2 mb-4 rounded bg-gray-700 text-white"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
+    <div className="signin-page">
+      <div className="signin-box">
+        <h2 className="signin-title">Sign In</h2>
 
-          <label>Password:</label>
-          <input
-            type="password"
-            className="w-full p-2 mb-4 rounded bg-gray-700 text-white"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
+        <form className="signin-form">
+          <div className="form-group">
+            <label>Email</label>
+            <input type="email" className="input" placeholder="Enter your email" required />
+          </div>
 
-          <button
-            type="submit"
-            className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Sign In
-          </button>
+          <div className="form-group">
+            <label>Password</label>
+            <div className="password-wrapper">
+              <input
+                type={showPassword ? 'text' : 'password'}
+                className="input password-input"
+                placeholder="Enter your password"
+                required
+              />
+              <span className="toggle-icon" onClick={togglePassword}>
+                {showPassword ? '👁️' : '🙈'}
+              </span>
+            </div>
+          </div>
+
+          <div className="form-group">
+            <label>Age</label>
+            <input type="number" className="input" placeholder="Enter your age" required />
+          </div>
+
+          <div className="form-group">
+            <label>Gender</label>
+            <select className="input" required>
+              <option value="">Select gender</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="other">Other</option>
+              <option value="prefer-not">Prefer not to say</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label>Country</label>
+            <select className="input" required>
+              <option value="">Select country</option>
+              <option value="india">India</option>
+              <option value="usa">United States</option>
+              <option value="uk">United Kingdom</option>
+              <option value="canada">Canada</option>
+              <option value="australia">Australia</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label>State</label>
+            <input type="text" className="input" placeholder="Enter your state" required />
+          </div>
+
+          <div className="form-group">
+            <label>Phone Number</label>
+            <input type="tel" className="input" placeholder="Enter your phone number" required />
+          </div>
+
+          <div className="form-group">
+            <label>Personal Info</label>
+            <textarea className="input" placeholder="Tell us something about yourself" rows="3" required />
+          </div>
+
+            <button type="submit" className="signin-btn">
+  🔐 Sign In
+</button>
         </form>
-
-        {message && <p className="mt-4 text-center">{message}</p>}
       </div>
     </div>
   );
